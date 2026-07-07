@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { background: #ffffff; }
+    a { color: #1f4b6e; }
+    a:hover { color: #b45309; }
+    @keyframes eldReveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; background:#ffffff; color:#1c2c46; font-family:'Source Serif 4', Georgia, serif; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;">
+  <div ref="{{ bindRoot }}" data-lesson-key="eld-u4-5" style="width:100%; max-width:1140px; margin:0 auto; padding:clamp(40px,6vw,80px) clamp(24px,4vw,48px) clamp(130px,14vw,190px);">
+
+    <a href="Unit 4.dc.html" style="display:inline-block; font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.15vw,17px); text-transform:uppercase; letter-spacing:0.18em; color:#1f4b6e; text-decoration:none; margin-bottom:clamp(28px,3.4vw,44px);">← Unit 4</a>
+
+    <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.15vw,17px); text-transform:uppercase; letter-spacing:0.2em; color:#9a927e;">Unit 4 · Lesson 5</p>
+    <h1 style="font-weight:700; font-size:clamp(42px,5.5vw,88px); line-height:1.05; color:#14213d; margin-top:6px;">How Does Our Government Work?</h1>
+
+    <div data-section="">
+      <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.1vw,16px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; margin-top:clamp(36px,4vw,56px);">Concepts and Vocabulary</p>
+      <h2 style="font-weight:700; font-size:clamp(28px,3vw,48px); color:#1f4b6e; margin-top:6px;">Learn New Words</h2>
+      <p style="font-size:clamp(21px,2.2vw,32px); line-height:1.6; color:#2a3a54; margin-top:clamp(10px,1.4vw,18px);">Read about the American government.</p>
+      <div style="margin-top:clamp(10px,1.4vw,18px); font-size:clamp(21px,2.2vw,32px); line-height:1.75; color:#1c2c46; display:flex; flex-direction:column; gap:clamp(10px,1.2vw,16px);">
+        <div>The <strong>government</strong> of the United States has three parts, or branches: <strong>legislative</strong>, <strong>executive</strong>, and <strong>judicial</strong>.</div>
+        <div>The legislative branch, or Congress, makes <strong>laws</strong>, or rules. The executive branch, or the president and his or her cabinet, makes sure the laws are followed. The judicial branch explains the laws.</div>
+        <div>All three branches follow the Constitution. The Constitution is the most important law in the United States.</div>
+      </div>
+
+      <div style="margin-top:clamp(20px,2.6vw,36px); border:1.5px solid #eae4d6; border-radius:16px; padding:clamp(16px,2vw,28px);">
+        <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#9a927e; margin-bottom:14px;">Three Branches of Government</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:clamp(14px,1.8vw,24px);">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <img src="images/l5-img_p0_3.png" alt="The United States Capitol building" style="width:100%; aspect-ratio:4/3.3; object-fit:cover; border-radius:12px;">
+            <div style="background:#ffffff; border:1.5px solid #14213d; border-radius:6px; padding:6px 12px; align-self:center; font-family:'Source Sans 3', sans-serif; font-size:clamp(14px,1.4vw,18px); color:#14213d; text-align:center;"><strong>Capitol</strong><br>Legislative Branch — Congress</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <img src="images/l5-img_p0_4.png" alt="The White House" style="width:100%; aspect-ratio:4/3.3; object-fit:cover; border-radius:12px;">
+            <div style="background:#ffffff; border:1.5px solid #14213d; border-radius:6px; padding:6px 12px; align-self:center; font-family:'Source Sans 3', sans-serif; font-size:clamp(14px,1.4vw,18px); color:#14213d; text-align:center;"><strong>White House</strong><br>Executive Branch — President</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <img src="images/l5-img_p0_2.png" alt="The Supreme Court building" style="width:100%; aspect-ratio:4/3.3; object-fit:cover; border-radius:12px;">
+            <div style="background:#ffffff; border:1.5px solid #14213d; border-radius:6px; padding:6px 12px; align-self:center; font-family:'Source Sans 3', sans-serif; font-size:clamp(14px,1.4vw,18px); color:#14213d; text-align:center;"><strong>Supreme Court</strong><br>Judicial Branch — Judges</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(20px,2.6vw,36px); display:flex; flex-wrap:wrap; gap:clamp(14px,1.8vw,24px); align-items:stretch;">
+        <div style="flex:1 1 240px; border:1.5px solid #eae4d6; border-radius:16px; padding:clamp(16px,2vw,28px) clamp(18px,2.2vw,32px);">
+          <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#9a927e;">Vocabulary</p>
+          <div style="margin-top:8px; font-size:clamp(22px,2.3vw,34px); line-height:1.6; color:#b45309; font-weight:600;">
+            <sc-for list="{{ vocab }}" as="w" hint-placeholder-count="5"><div>{{ w }}</div></sc-for>
+          </div>
+        </div>
+        <div style="flex:1 1 320px; border:1.5px solid #eae4d6; border-radius:16px; padding:clamp(16px,2vw,28px) clamp(18px,2.2vw,32px);">
+          <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#9a927e;">Who Is in Each Branch?</p>
+          <div style="margin-top:8px; font-size:clamp(21px,2.2vw,32px); line-height:1.7; color:#1c2c46; display:flex; flex-direction:column; gap:clamp(8px,1vw,14px);">
+            <div><span style="color:#1f4b6e; font-weight:600;">legislative branch</span> — Congress (senators and representatives)</div>
+            <div><span style="color:#1f4b6e; font-weight:600;">executive branch</span> — the president (and cabinet)</div>
+            <div><span style="color:#1f4b6e; font-weight:600;">judicial branch</span> — Supreme Court (judges)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-section="" style="display:none;">
+      <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.1vw,16px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; margin-top:clamp(48px,5.5vw,80px);">Speaking and Listening</p>
+      <h2 style="font-weight:700; font-size:clamp(28px,3vw,48px); color:#1f4b6e; margin-top:6px;">Read and Respond</h2>
+      <p style="font-size:clamp(21px,2.2vw,32px); line-height:1.6; color:#2a3a54; margin-top:clamp(10px,1.4vw,18px);">Take turns reading with a partner.</p>
+      <div style="margin-top:clamp(14px,1.8vw,24px); font-size:clamp(21px,2.2vw,32px); line-height:1.9; color:#1c2c46;">
+        <div><span style="color:#b45309; font-weight:600;">MS. JACKSON:</span> What are the three branches of government?</div>
+        <div><span style="color:#b45309; font-weight:600;">LUCAS:</span> They are the legislative, the executive, and the judicial branches.</div>
+        <div><span style="color:#b45309; font-weight:600;">LIN:</span> The legislative branch makes the laws.</div>
+        <div><span style="color:#b45309; font-weight:600;">SUSANA:</span> The executive branch makes sure that people follow the laws.</div>
+        <div><span style="color:#b45309; font-weight:600;">LUIS:</span> The judicial branch explains the laws.</div>
+      </div>
+    </div>
+
+    <div data-section="" style="display:none;">
+      <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.1vw,16px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; margin-top:clamp(48px,5.5vw,80px);">Vocabulary</p>
+      <h2 style="font-weight:700; font-size:clamp(28px,3vw,48px); color:#1f4b6e; margin-top:6px;">Complete the Sentences</h2>
+      <p style="font-size:clamp(21px,2.2vw,32px); line-height:1.6; color:#2a3a54; margin-top:clamp(10px,1.4vw,18px);">Use the vocabulary words.</p>
+      <div style="margin-top:clamp(14px,1.8vw,24px); font-size:clamp(21px,2.2vw,32px); line-height:2; color:#1c2c46;">
+        <div>1. The president is the head of the <span style="color:#2f7d52; font-weight:600; border-bottom:2px solid #2f7d52;">executive</span> branch.</div>
+        <div>2. The legislative branch makes the <span style="color:#8a94a6;">________</span>.</div>
+        <div>3. The Supreme Court is in the <span style="color:#8a94a6;">________</span> branch.</div>
+        <div>4. The <span style="color:#8a94a6;">________</span> branch is also called Congress.</div>
+        <div>5. The United States <span style="color:#8a94a6;">________</span> has three branches, or parts.</div>
+      </div>
+    </div>
+
+    <div data-section="" style="display:none;">
+      <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.1vw,16px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; margin-top:clamp(48px,5.5vw,80px);">Grammar and Conventions</p>
+      <h2 style="font-weight:700; font-size:clamp(28px,3vw,48px); color:#1f4b6e; margin-top:6px;">Write Sentences</h2>
+      <div style="margin-top:clamp(10px,1.4vw,18px); font-size:clamp(21px,2.2vw,32px); line-height:1.7; color:#2a3a54;">
+        <div>Use <strong>and</strong>, <strong>or</strong>, and <strong>but</strong> to connect two ideas.</div>
+      </div>
+      <div style="margin-top:clamp(20px,2.6vw,36px); display:flex; flex-wrap:wrap; gap:clamp(14px,1.8vw,24px); align-items:flex-start;">
+        <div style="flex:1 1 420px; font-size:clamp(21px,2.2vw,32px); line-height:2; color:#1c2c46;">
+          <p style="font-size:clamp(21px,2.2vw,32px); color:#2a3a54;">Complete the following sentences. Use and, or, and but.</p>
+          <div>1. I want to see the White House, <span style="color:#2f7d52; font-weight:600; border-bottom:2px solid #2f7d52;">but</span> I don't have time.</div>
+          <div>2. The president <span style="color:#8a94a6;">________</span> the vice president are part of the executive branch.</div>
+          <div>3. Is the Supreme Court in the judicial branch <span style="color:#8a94a6;">________</span> the legislative branch?</div>
+          <div>4. The three branches are judicial, legislative, <span style="color:#8a94a6;">________</span> the executive.</div>
+          <div>5. Is Congress in the legislative <span style="color:#8a94a6;">________</span> judicial branch?</div>
+        </div>
+        <div style="flex:0 1 420px; border:1.5px solid #eae4d6; border-radius:16px; padding:clamp(16px,2vw,28px) clamp(18px,2.2vw,32px);">
+          <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#9a927e;">And · Or · But</p>
+          <div style="margin-top:8px; font-size:clamp(19px,2vw,29px); line-height:1.7; color:#1c2c46; display:flex; flex-direction:column; gap:clamp(6px,0.8vw,10px);">
+            <div><span style="color:#b45309; font-weight:600;">AND</span> — There are state and national governments.</div>
+            <div><span style="color:#b45309; font-weight:600;">OR</span> — Only the executive or judicial branch approves laws.</div>
+            <div><span style="color:#b45309; font-weight:600;">BUT</span> — Congress writes laws but the president signs them.</div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:clamp(21px,2.2vw,32px); line-height:1.6; color:#1c2c46; margin-top:clamp(20px,2.4vw,32px);">Now write four sentences. Use and, or, and but.</p>
+      <p style="font-size:clamp(19px,2vw,29px); line-height:1.6; color:#5a6478; margin-top:8px;"><em>EXAMPLE: I want to visit the White House and the Capitol.</em></p>
+      <div style="margin-top:clamp(10px,1.4vw,18px); font-size:clamp(21px,2.2vw,32px); line-height:2.1; color:#8a94a6;">
+        <div>1. ____________________________________</div>
+        <div>2. ____________________________________</div>
+        <div>3. ____________________________________</div>
+        <div>4. ____________________________________</div>
+      </div>
+    </div>
+
+    <div data-lesson-footer="" style="display:none;"></div>
+  </div>
+
+  <div style="position:fixed; left:50%; bottom:clamp(16px,2.4vw,30px); transform:translateX(-50%); z-index:60; display:flex; align-items:center; gap:clamp(12px,1.6vw,22px); background:#ffffff; border:1.5px solid #eae4d6; box-shadow:0 14px 44px -14px rgba(20,33,61,0.4); border-radius:999px; padding:clamp(8px,0.9vw,11px) clamp(10px,1.1vw,16px); max-width:calc(100vw - 24px);">
+    <button type="button" onClick="{{ onBack }}" style="{{ backStyle }}" aria-label="Go back one step" title="Go back one step">‹</button>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px; padding:0 4px;">
+      <div style="display:flex; gap:7px; align-items:center; min-height:9px;"><sc-for list="{{ dots }}" as="dot" hint-placeholder-count="4"><div style="{{ dot.style }}"></div></sc-for></div>
+      <div style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,14.5px); letter-spacing:0.16em; text-transform:uppercase; color:#9a927e; white-space:nowrap;">{{ progressLabel }}</div>
+    </div>
+    <button type="button" onClick="{{ onPrimary }}" style="{{ nextStyle }}">
+      <span>{{ nextLabel }}</span>
+      <span style="font-size:1.15em; line-height:1;">{{ nextIcon }}</span>
+    </button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;teacherPreview&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Pacing&quot;}}">
+class Component extends DCLogic {
+  state = { step: 1, total: 0 };
+  bindRoot = (el) => { this.rootEl = el; };
+  next = () => {
+    if (this.state.step >= this.state.total) return;
+    const idx = this.state.step;
+    this.setState(s => ({ step: s.step + 1 }), () => {
+      this.persist();
+      this.apply();
+      const t = this.rootEl.querySelectorAll('[data-section]')[idx];
+      if (t) { t.style.animation = 'none'; void t.offsetWidth; t.style.animation = 'eldReveal .55s cubic-bezier(.22,.61,.36,1) both'; }
+      this.scrollToSection(idx);
+    });
+  };
+  back = () => {
+    if (this.state.step <= 1) return;
+    this.setState(s => ({ step: s.step - 1 }), () => {
+      this.persist();
+      this.apply();
+      this.scrollToSection(this.state.step - 1);
+    });
+  };
+  reset = () => {
+    this.setState({ step: 1 }, () => {
+      this.persist();
+      this.apply();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  };
+
+  componentDidMount() {
+    const el = this.rootEl;
+    if (!el) return;
+    const total = el.querySelectorAll('[data-section]').length;
+    this.storageKey = 'eld-pace-' + (el.getAttribute('data-lesson-key') || 'x');
+    let saved = parseInt(localStorage.getItem(this.storageKey) || '1', 10);
+    if (!(saved >= 1)) saved = 1;
+    if (this.props.teacherPreview) saved = total;
+    if (saved > total) saved = total;
+    this.setState({ total: total, step: saved }, () => this.apply());
+  }
+
+  apply() {
+    const el = this.rootEl;
+    if (!el) return;
+    const secs = el.querySelectorAll('[data-section]');
+    for (let i = 0; i < secs.length; i++) secs[i].style.display = i < this.state.step ? '' : 'none';
+    const footer = el.querySelector('[data-lesson-footer]');
+    if (footer) footer.style.display = this.state.step >= this.state.total ? '' : 'none';
+  }
+
+  persist() { try { localStorage.setItem(this.storageKey, String(this.state.step)); } catch (e) {} }
+
+  scrollToSection(idx) {
+    const el = this.rootEl;
+    if (!el) return;
+    const t = el.querySelectorAll('[data-section]')[idx];
+    if (!t) return;
+    const top = t.getBoundingClientRect().top + window.scrollY - 90;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+
+  renderVals() {
+    const step = this.state.step, total = this.state.total;
+    const atStart = step <= 1;
+    const atEnd = total > 0 && step >= total;
+    const backStyle = { width: 'clamp(42px,4.4vw,50px)', height: 'clamp(42px,4.4vw,50px)', flex: '0 0 auto', borderRadius: '50%', border: '1.5px solid #ddd6c6', background: '#ffffff', color: '#14213d', fontSize: '26px', lineHeight: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 0 4px 0', transition: 'opacity .2s', opacity: atStart ? 0.32 : 1, cursor: atStart ? 'default' : 'pointer' };
+    const nextStyle = { display: 'flex', alignItems: 'center', gap: '10px', border: 'none', borderRadius: '999px', padding: 'clamp(11px,1.2vw,15px) clamp(20px,2vw,30px)', fontFamily: "'Source Sans 3', sans-serif", fontWeight: '700', fontSize: 'clamp(14px,1.4vw,20px)', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#ffffff', background: atEnd ? '#2f7d52' : '#14213d', cursor: 'pointer', transition: 'background .2s' };
+    const dots = [];
+    for (let i = 0; i < total; i++) dots.push({ style: 'width:9px;height:9px;border-radius:50%;transition:background .3s, transform .3s;transform:' + (i === step - 1 ? 'scale(1.3)' : 'scale(1)') + ';background:' + (i < step ? '#b45309' : '#ddd6c6') + ';' });
+    return {
+      bindRoot: this.bindRoot,
+      onNext: this.next,
+      onPrimary: atEnd ? this.reset : this.next,
+      onBack: this.back,
+      onReset: this.reset,
+      backStyle: backStyle,
+      nextStyle: nextStyle,
+      progressLabel: total ? ('Section ' + step + ' of ' + total) : ('Section ' + step),
+      nextLabel: atEnd ? 'Start lesson over' : 'Reveal next',
+      nextIcon: atEnd ? '↺' : '→',
+      dots: dots,
+      vocab: ['executive', 'government', 'judicial', 'laws', 'legislative'],
+    };
+  }
+}
+</script>
+</body>
+</html>

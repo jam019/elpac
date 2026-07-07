@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { background: #ffffff; }
+    a { color: #1f4b6e; }
+    a:hover { color: #b45309; }
+  </style>
+</helmet>
+
+<div style="min-height:100vh; background:#ffffff; color:#1c2c46; font-family:'Source Serif 4', Georgia, serif; -webkit-font-smoothing:antialiased; display:flex; flex-direction:column; align-items:center; padding:clamp(48px,7vw,110px) clamp(24px,5vw,80px) clamp(60px,7vw,100px);">
+
+  <div style="text-align:center; max-width:900px;">
+    <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(12px,1.15vw,17px); text-transform:uppercase; letter-spacing:0.22em; color:#9a927e;">English Language Development</p>
+    <h1 style="font-weight:700; font-size:clamp(46px,6vw,92px); line-height:1.05; color:#14213d; margin-top:10px;">Welcome to English Class</h1>
+    <p style="font-size:clamp(19px,2vw,29px); line-height:1.35; color:#2a3a54; margin-top:clamp(18px,2.2vw,30px);">Choose a unit to get started.</p>
+
+    <button onClick="{{ toggleLo }}" style="display:inline-flex; align-items:center; gap:10px; margin-top:clamp(20px,2.4vw,32px); font-family:'Source Sans 3', sans-serif; font-weight:700; font-size:clamp(14px,1.4vw,18px); letter-spacing:0.06em; color:#ffffff; background:#1f4b6e; border:none; border-radius:999px; padding:12px 26px; cursor:pointer; transition:background .2s, transform .2s;" style-hover="background:#b45309; transform:translateY(-1px);">Learning Objective &amp; Success Criteria <span style="font-size:0.85em;">{{ loArrow }}</span></button>
+
+    <sc-if value="{{ loOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:clamp(18px,2.2vw,28px); text-align:left; background:#faf8f2; border:1.5px solid #eae4d6; border-radius:20px; padding:clamp(22px,2.8vw,40px) clamp(24px,3vw,48px);">
+        <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; font-weight:700;">Learning Objective</p>
+        <p style="font-size:clamp(18px,1.9vw,26px); line-height:1.5; color:#14213d; margin-top:8px;"><strong>Students will be able to</strong> speak and write about themselves, their school, their community, and their world using new vocabulary and complete sentences, with at least 80% accuracy on each lesson's writing and speaking tasks.</p>
+        <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#b45309; font-weight:700; margin-top:clamp(20px,2.4vw,30px);">Success Criteria</p>
+        <p style="font-size:clamp(18px,1.9vw,26px); line-height:1.5; color:#14213d; margin-top:8px; font-weight:600;">I am successful when:</p>
+        <ul style="margin-top:8px; padding-left:1.2em; display:flex; flex-direction:column; gap:8px;">
+          <li style="font-size:clamp(17px,1.7vw,23px); line-height:1.5; color:#2a3a54;">I can say and write at least 5 new vocabulary words from each lesson.</li>
+          <li style="font-size:clamp(17px,1.7vw,23px); line-height:1.5; color:#2a3a54;">I can answer questions in complete sentences using a sentence frame.</li>
+          <li style="font-size:clamp(17px,1.7vw,23px); line-height:1.5; color:#2a3a54;">I can read a short text and answer the questions correctly.</li>
+          <li style="font-size:clamp(17px,1.7vw,23px); line-height:1.5; color:#2a3a54;">I can finish each writing task with correct capital letters and periods.</li>
+        </ul>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="margin-top:clamp(44px,5.5vw,80px); width:100%; max-width:1060px; display:flex; flex-direction:column; gap:clamp(14px,1.8vw,24px);">
+    <sc-for list="{{ units }}" as="unit" hint-placeholder-count="4">
+      <a href="{{ unit.href }}" target="{{ linkTarget }}" rel="noopener" style="display:flex; flex-direction:column; text-decoration:none; color:#1c2c46; background:#ffffff; border:1.5px solid #eae4d6; border-radius:20px; padding:clamp(18px,2.4vw,32px) clamp(20px,2.8vw,44px); transition:border-color .2s, box-shadow .2s, transform .2s;" style-hover="border-color:#b45309; box-shadow:0 16px 44px -18px rgba(20,33,61,0.35); transform:translateY(-2px);">
+        <div style="display:flex; align-items:center; gap:clamp(20px,2.6vw,40px);">
+          <div style="flex:0 0 auto; width:clamp(56px,5.5vw,88px); height:clamp(56px,5.5vw,88px); border-radius:50%; background:{{ unit.badgeBg }}; color:{{ unit.badgeColor }}; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:clamp(25px,2.6vw,40px);">{{ unit.num }}</div>
+          <div style="flex:1 1 auto; min-width:0;">
+            <p style="font-family:'Source Sans 3', sans-serif; font-size:clamp(11px,1.05vw,15px); text-transform:uppercase; letter-spacing:0.18em; color:#9a927e;">Unit {{ unit.num }} · 6 lessons</p>
+            <h2 style="font-weight:700; font-size:clamp(25px,2.6vw,40px); line-height:1.15; color:#14213d; margin-top:2px;">{{ unit.title }}</h2>
+            <p style="font-size:clamp(17px,1.8vw,25px); line-height:1.5; color:#5a6478; margin-top:4px;">{{ unit.blurb }}</p>
+          </div>
+          <div style="flex:0 0 auto; font-size:clamp(23px,2.4vw,36px); color:#b45309;">→</div>
+        </div>
+        <sc-if value="{{ showLessons }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex; flex-wrap:wrap; gap:8px 10px; margin-top:clamp(14px,1.8vw,22px); padding-left:clamp(0px,8.1vw,128px);">
+            <sc-for list="{{ unit.lessons }}" as="lessonTitle" hint-placeholder-count="6">
+              <span style="font-family:'Source Sans 3', sans-serif; font-size:clamp(13px,1.3vw,17px); line-height:1.3; color:#5a6478; background:#faf8f2; border:1px solid #eae4d6; border-radius:999px; padding:6px 14px;">{{ lessonTitle }}</span>
+            </sc-for>
+          </div>
+        </sc-if>
+      </a>
+    </sc-for>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showLessons&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot; },
+  &quot;openInNewTab&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot; }
+}">
+class Component extends DCLogic {
+  state = { loOpen: false };
+  renderVals() {
+    const palette = [
+      { bg: '#14213d', fg: '#ffffff' },
+      { bg: '#1f4b6e', fg: '#ffffff' },
+      { bg: '#b45309', fg: '#ffffff' },
+      { bg: '#2f7d52', fg: '#ffffff' },
+    ];
+    const data = [
+      {
+        title: 'Welcome to English',
+        blurb: 'The alphabet, numbers, greetings, school, the classroom, and telling time.',
+        href: 'unit1/Landing Starter.dc.html',
+        lessons: ['Letters and Numbers', "What's Your Name?", 'People and Places at School', 'The Classroom', 'What We Do in Class', 'What Time Is It?'],
+      },
+      {
+        title: 'Me and My World',
+        blurb: 'Clothes, the body, family, feelings, food and drinks, and the calendar.',
+        href: 'unit2/Unit 2.dc.html',
+        lessons: ['What Do I Wear?', 'What Are the Parts of Your Body?', 'What Is a Family?', 'How Do You Feel?', 'Are You Hungry or Thirsty?', 'Days and Months'],
+      },
+      {
+        title: 'My School and Community',
+        blurb: 'Classes, addresses, cities and towns, shopping, money, and community jobs.',
+        href: 'unit3/Unit 3.dc.html',
+        lessons: ["What's Your Favorite Class?", 'Where Do You Live?', 'City or Town?', 'What Do You Need?', 'How Much Is It?', 'Workers in Your Community'],
+      },
+      {
+        title: 'My Country and World',
+        blurb: 'Seasons, transportation, US regions, important Americans, government, and our world.',
+        href: 'unit4/Unit 4.dc.html',
+        lessons: ['What Season Is It?', 'How Do You Get Around?', 'What Region Do You Live In?', 'Important Americans', 'How Does Our Government Work?', 'Our World'],
+      },
+    ];
+    return {
+      loOpen: this.state.loOpen,
+      loArrow: this.state.loOpen ? '▲' : '▼',
+      toggleLo: () => this.setState(s => ({ loOpen: !s.loOpen })),
+      showLessons: this.props.showLessons ?? false,
+      linkTarget: (this.props.openInNewTab ?? false) ? '_blank' : '_self',
+      units: data.map((d, i) => ({
+        num: String(i + 1),
+        title: d.title,
+        blurb: d.blurb,
+        href: d.href,
+        lessons: d.lessons,
+        badgeBg: palette[i].bg,
+        badgeColor: palette[i].fg,
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>
